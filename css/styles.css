@@ -139,3 +139,38 @@ footer {
     background: #333;
     color: white;
 }
+.post-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.content {
+    line-height: 1.6;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+}
