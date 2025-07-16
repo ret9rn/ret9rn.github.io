@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ret9rnの博客</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>我的博客</h1>
+            <nav>
+                <a href="#home">首页</a>
+                <a href="#about">关于</a>
+                <a href="#posts">文章</a>
+                <a href="#contact">联系</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>欢迎来到ret9rn的博客</h2>
+                <p>分享技术、maimai与生活</p>
+                <a href="#posts" class="btn">浏览文章</a>
+            </div>
+        </section>
+
+        <section id="posts" class="posts">
+                <h2>最新文章</h2>
+                <div class="post-grid">
+                    {% for post in site.posts %}
+                    <article class="card">
+                        {% if post.image %}
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                    {% endif %}
+                    <div class="card-content">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                        <a href="{{ post.url }}" class="btn">阅读更多</a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2085 KohaD. 保留所有权利。</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
