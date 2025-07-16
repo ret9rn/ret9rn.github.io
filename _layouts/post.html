@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - 我的博客</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>ret9rn的博客</h1>
+            <nav>
+                <a href="/#home">首页</a>
+                <a href="/#about">关于</a>
+                <a href="/#posts">文章</a>
+                <a href="/#contact">联系</a>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <article class="post-content">
+        <h2>{{ page.title }}</h2>
+        <p class="meta">发布于 {{ page.date | date: "%Y-%m-%d" }} | 作者：{{ page.author }}</p>
+        {% if page.image %}
+        <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
+        {% endif %}
+        <div class="content">
+            {{ content }}
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>© 2025 ret9rn. 保留所有权利。</p>
+</footer>
+
+<script src="/js/main.js"></script></body>
+</html>
+
